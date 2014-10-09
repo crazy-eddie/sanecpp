@@ -9,7 +9,7 @@ include_directories(${Boost_INCLUDE_DIR})
 
 function(add_boost_test name)
   add_executable(${name} EXCLUDE_FROM_ALL ${ARGN})
-  #add_executable(${name} ${ARGN})
+
   target_link_libraries(${name} ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY})
   
   add_test(${name} ./${name})
